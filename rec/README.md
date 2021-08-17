@@ -9,16 +9,11 @@ Group A17
 
 89443 Francisco Figueiredo ist189443
 
-*(fill-in line above with student number, name, and @GitHub identity of module leader; and then delete this line)*
-
 ### Contributors
 
 79730 João Silva ist179730
 
 86578 Bruna Faria ist186578
-
-*(fill-in lines above with student number, name, and @GitHub identity of module contributors; and then delete this line)*
-
 
 ## About
 
