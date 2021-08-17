@@ -1,0 +1,50 @@
+//
+// Protocol buffers definition
+//
+syntax = "proto3";
+package pt.tecnico.rec.grpc;
+
+option java_multiple_files = true;
+
+message CtrlPingRequest {
+  string input = 1;
+}
+
+message CtrlPingResponse {
+	string output = 1;
+}
+
+message PingRequest {
+	string input = 1;
+}
+
+message PingResponse {
+	string output = 1;
+}
+
+message ReadRequest {
+	string id = 1;
+}
+
+message ReadResponse {
+	double value = 1;    //balance, latitude, longitude or nrBikes
+}
+
+message WriteRequest {
+	string id = 1;
+	double value = 2;    //balance, latitude, longitude or nrBikes
+}
+
+message WriteResponse {
+	string response = 1;
+}
+  
+service RecordService {
+  rpc ctrl_ping(CtrlPingRequest) returns (CtrlPingResponse);
+  
+  rpc ping(PingRequest) returns (PingResponse);
+  
+  rpc read(ReadRequest) returns (ReadResponse);
+  
+  rpc write(WriteRequest) returns (WriteResponse);
+}
